@@ -1,0 +1,8 @@
+<h1>Créer une nouvelle liste</h1>
+
+<%= simple_form_for @list do |f| %>
+  <%= f.input :name %>
+  <%= f.submit "Créer la liste" %>
+<% end %>
+
+<%= link_to 'Retour aux listes', lists_path %>

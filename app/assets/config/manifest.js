@@ -5,3 +5,5 @@
 // app/assets/config/manifest.js
 //= link popper.js
 //= link bootstrap.min.js
+pin "bootstrap", to: "bootstrap.min.js", preload: true
+pin "@popperjs/core", to: "popper.js", preload: true

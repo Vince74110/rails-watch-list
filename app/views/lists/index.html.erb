@@ -1,0 +1,20 @@
+<div class="navbar">
+  <div class="navbar-overlay">
+    <div class="navbar-content">
+      <h1 class="title">🎬 Toutes les listes</h1>
+
+      <nav class="navbar-links">
+        <%= link_to "Créer une liste", new_list_path, class: "navbar-link" %>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<div class="lists-container">
+  <% @lists.each do |list| %>
+    <div class="list-card">
+      <h2><%= list.name %></h2>
+      <%= link_to "Voir la liste", list_path(list), class: "btn" %>
+    </div>
+  <% end %>
+</div>
