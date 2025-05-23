@@ -1,6 +1,5 @@
 <%= simple_form_for [@list, @bookmark] do |f| %>
   <%= f.input :movie_id, as: :radio_buttons, collection: Movie.all, label: "Sélectionnez un film" %>
   <%= f.input :comment %> 
-  <%= f.input :image_url, label: "URL de l'image" %>
   <%= f.submit "Ajouter le bookmark" %>
 <% end %>

@@ -14,7 +14,18 @@
   <% @lists.each do |list| %>
     <div class="list-card">
       <h2><%= list.name %></h2>
-      <%= link_to "Voir la liste", list_path(list), class: "btn" %>
+
+      <% if list.photo.attached? %>
+        <%= cl_image_tag list.image, style: "max-width: 300px;" %>
+      <% else %>
+        <%= image_tag list.image, style: "max-width: 300px;" %>
+      <% end %>
+      
+      <div class="text-center mt-3">
+      <%= link_to "Voir la liste", list_path(list), class: "btn mt-3" %>
+     </div>
     </div>
   <% end %>
 </div>
+
+
